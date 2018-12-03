@@ -1,4 +1,4 @@
-package com.example.checkpointStatuses.checkpointStatuses;
+package com.example.checkpointstatuses.checkpointstatuses;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

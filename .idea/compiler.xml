@@ -6,13 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="checkpointStatuses" />
+        <module name="checkpoint-statuses" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="checkpoint-statuses" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="checkpointStatuses" options="-parameters" />
+      <module name="checkpoint-statuses" options="-parameters" />
     </option>
   </component>
 </project>
