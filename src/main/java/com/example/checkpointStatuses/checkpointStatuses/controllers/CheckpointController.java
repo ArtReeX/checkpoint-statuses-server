@@ -1,11 +1,14 @@
 package com.example.checkpointstatuses.checkpointstatuses.controllers;
 
 import com.example.checkpointstatuses.checkpointstatuses.models.Checkpoint;
-import com.example.checkpointstatuses.checkpointstatuses.models.dtos.CheckpointDTO;
+import com.example.checkpointstatuses.checkpointstatuses.models.dtos.checkpoint.CheckpointDTO;
 import com.example.checkpointstatuses.checkpointstatuses.services.CheckpointService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/checkpoints")
@@ -18,12 +21,12 @@ public class CheckpointController {
     }
 
     @GetMapping
-    public ResponseEntity<CheckpointDTO> getCheckpoints() {
+    public ResponseEntity<List<Checkpoint>> getCheckpoints() {
         return _checkpointService.getCheckpoints();
     }
 
     @PostMapping
-    public ResponseEntity<CheckpointDTO> addCheckpoint(@RequestBody CheckpointDTO checkpointDTO) {
+    public ResponseEntity<Checkpoint> addCheckpoint(@RequestBody @Valid CheckpointDTO checkpointDTO) {
         return _checkpointService.addCheckpoint(checkpointDTO);
     }
 

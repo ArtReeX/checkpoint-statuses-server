@@ -1,13 +1,13 @@
 package com.example.checkpointstatuses.checkpointstatuses.models.mapping;
 
 import com.example.checkpointstatuses.checkpointstatuses.models.Checkpoint;
-import com.example.checkpointstatuses.checkpointstatuses.models.dtos.CheckpointDTO;
+import com.example.checkpointstatuses.checkpointstatuses.models.dtos.checkpoint.CheckpointDTO;
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-12-03T20:26:31+0300",
+    date = "2018-12-04T17:42:14+0300",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 11.0.1 (Oracle Corporation)"
 )
 @Component
@@ -23,6 +23,9 @@ public class CheckpointMapperImpl implements CheckpointMapper {
 
         checkpoint.setId( checkpointDTO.getId() );
         checkpoint.setName( checkpointDTO.getName() );
+        checkpoint.setCountry( checkpointDTO.getCountry() );
+        checkpoint.setLoad( checkpointDTO.getLoad() );
+        checkpoint.setActive( checkpointDTO.getActive() );
 
         return checkpoint;
     }
@@ -37,6 +40,9 @@ public class CheckpointMapperImpl implements CheckpointMapper {
 
         checkpointDTO.setId( checkpoint.getId() );
         checkpointDTO.setName( checkpoint.getName() );
+        checkpointDTO.setCountry( checkpoint.getCountry() );
+        checkpointDTO.setLoad( checkpoint.getLoad() );
+        checkpointDTO.setActive( checkpoint.getActive() );
 
         return checkpointDTO;
     }
