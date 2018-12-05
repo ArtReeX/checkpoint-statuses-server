@@ -1,10 +1,11 @@
 package com.example.checkpointstatuses.checkpointstatuses.models.dtos.checkpoint;
 
+import com.example.checkpointstatuses.checkpointstatuses.models.mapping.Statistics;
 import lombok.Data;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 public class CheckpointDTO {
@@ -14,12 +15,10 @@ public class CheckpointDTO {
     private String name;
 
     @NotNull
-    private String country;
-
-    @NotNull
-    @Min(0)@Max(100)
-    private Integer load = 0;
+    private String road;
 
     @NotNull
     private Boolean active = true;
+
+    private List<Statistics> statistics = new ArrayList<>();
 }

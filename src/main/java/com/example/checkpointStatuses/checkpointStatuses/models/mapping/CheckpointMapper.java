@@ -7,6 +7,5 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface CheckpointMapper {
     Checkpoint checkpointDTOToCheckpoint(CheckpointDTO checkpointDTO);
-    CheckpointDTO checkpointToCheckpointDTO(Checkpoint checkpoint);
 }
 

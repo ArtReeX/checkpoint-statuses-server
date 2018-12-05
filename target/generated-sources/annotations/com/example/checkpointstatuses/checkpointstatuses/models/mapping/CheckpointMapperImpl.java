@@ -2,12 +2,14 @@ package com.example.checkpointstatuses.checkpointstatuses.models.mapping;
 
 import com.example.checkpointstatuses.checkpointstatuses.models.Checkpoint;
 import com.example.checkpointstatuses.checkpointstatuses.models.dtos.checkpoint.CheckpointDTO;
+import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-12-04T20:51:57+0300",
+    date = "2018-12-05T23:11:04+0300",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 11.0.1 (Oracle Corporation)"
 )
 @Component
@@ -23,27 +25,16 @@ public class CheckpointMapperImpl implements CheckpointMapper {
 
         checkpoint.setIdentifier( checkpointDTO.getIdentifier() );
         checkpoint.setName( checkpointDTO.getName() );
-        checkpoint.setCountry( checkpointDTO.getCountry() );
-        checkpoint.setLoad( checkpointDTO.getLoad() );
+        checkpoint.setRoad( checkpointDTO.getRoad() );
+        List<Statistics> list = checkpointDTO.getStatistics();
+        if ( list != null ) {
+            checkpoint.setStatistics( new ArrayList<Statistics>( list ) );
+        }
+        else {
+            checkpoint.setStatistics( null );
+        }
         checkpoint.setActive( checkpointDTO.getActive() );
 
         return checkpoint;
-    }
-
-    @Override
-    public CheckpointDTO checkpointToCheckpointDTO(Checkpoint checkpoint) {
-        if ( checkpoint == null ) {
-            return null;
-        }
-
-        CheckpointDTO checkpointDTO = new CheckpointDTO();
-
-        checkpointDTO.setIdentifier( checkpoint.getIdentifier() );
-        checkpointDTO.setName( checkpoint.getName() );
-        checkpointDTO.setCountry( checkpoint.getCountry() );
-        checkpointDTO.setLoad( checkpoint.getLoad() );
-        checkpointDTO.setActive( checkpoint.getActive() );
-
-        return checkpointDTO;
     }
 }
