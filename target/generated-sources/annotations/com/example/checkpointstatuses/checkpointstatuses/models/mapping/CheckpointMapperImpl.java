@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-12-04T17:42:14+0300",
+    date = "2018-12-04T20:51:57+0300",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 11.0.1 (Oracle Corporation)"
 )
 @Component
@@ -21,7 +21,7 @@ public class CheckpointMapperImpl implements CheckpointMapper {
 
         Checkpoint checkpoint = new Checkpoint();
 
-        checkpoint.setId( checkpointDTO.getId() );
+        checkpoint.setIdentifier( checkpointDTO.getIdentifier() );
         checkpoint.setName( checkpointDTO.getName() );
         checkpoint.setCountry( checkpointDTO.getCountry() );
         checkpoint.setLoad( checkpointDTO.getLoad() );
@@ -38,7 +38,7 @@ public class CheckpointMapperImpl implements CheckpointMapper {
 
         CheckpointDTO checkpointDTO = new CheckpointDTO();
 
-        checkpointDTO.setId( checkpoint.getId() );
+        checkpointDTO.setIdentifier( checkpoint.getIdentifier() );
         checkpointDTO.setName( checkpoint.getName() );
         checkpointDTO.setCountry( checkpoint.getCountry() );
         checkpointDTO.setLoad( checkpoint.getLoad() );

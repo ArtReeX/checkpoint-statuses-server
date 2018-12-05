@@ -2,22 +2,24 @@ package com.example.checkpointstatuses.checkpointstatuses.models.dtos.checkpoint
 
 import lombok.Data;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Data
 public class CheckpointDTO {
-    private String id;
+    private String identifier;
 
     @NotNull
-    @Size(min = 2, max = 100)
     private String name;
 
     @NotNull
-    @Size(min = 2, max = 100)
     private String country;
 
+    @NotNull
+    @Min(0)@Max(100)
     private Integer load = 0;
 
+    @NotNull
     private Boolean active = true;
 }

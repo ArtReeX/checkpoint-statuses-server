@@ -20,14 +20,18 @@ public class CheckpointController {
         this._checkpointService = service;
     }
 
-    @GetMapping
+    @GetMapping("/getCheckpoints")
     public ResponseEntity<List<Checkpoint>> getCheckpoints() {
         return _checkpointService.getCheckpoints();
     }
 
-    @PostMapping
+    @PostMapping("/addCheckpoint")
     public ResponseEntity<Checkpoint> addCheckpoint(@RequestBody @Valid CheckpointDTO checkpointDTO) {
         return _checkpointService.addCheckpoint(checkpointDTO);
     }
 
+    @GetMapping("/delCheckpoint")
+    public ResponseEntity<Checkpoint> delCheckpoint(@RequestParam("identifier") String identifier) {
+        return _checkpointService.delCheckpoint(identifier);
+    }
 }

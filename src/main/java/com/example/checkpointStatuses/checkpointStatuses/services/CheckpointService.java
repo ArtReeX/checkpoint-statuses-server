@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CheckpointService {
@@ -19,8 +20,8 @@ public class CheckpointService {
 
     @Autowired
     public CheckpointService(CheckpointMapper mapper, CheckpointsRepository repository) {
-        _mapper = mapper;
-        _repository = repository;
+        this._mapper = mapper;
+        this._repository = repository;
     }
 
     public ResponseEntity<List<Checkpoint>> getCheckpoints() {
@@ -31,5 +32,19 @@ public class CheckpointService {
     public ResponseEntity<Checkpoint> addCheckpoint(CheckpointDTO checkpointDTO) {
         Checkpoint checkpoint = _repository.insert(_mapper.checkpointDTOToCheckpoint(checkpointDTO));
         return new ResponseEntity<>(checkpoint, HttpStatus.CREATED);
+    }
+
+    public ResponseEntity<Checkpoint> delCheckpoint(String identifier) {
+        Optional<Checkpoint> checkpoints = _repository.findById(identifier);
+        System.out.println(identifier);
+        if (!checkpoints.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        Checkpoint checkpoint = checkpoints.get();
+
+        _repository.delete(checkpoint);
+
+        return new ResponseEntity<>(checkpoint, HttpStatus.OK);
     }
 }

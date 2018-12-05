@@ -8,26 +8,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "checkpoints")
 public class Checkpoint {
     @Id
-    private String id;
+    private String identifier;
 
     private String name;
     private String country;
     private Integer load;
     private Boolean active;
 
-    public Checkpoint() {}
-
-    public Checkpoint(String name, String country, Integer load, Boolean active) {
-        this.name = name;
-        this.country = country;
-        this.load = load;
-        this.active = active;
-    }
-
     @Override
     public String toString() {
         return String.format(
-                "Customer[id='%s', name='%s', country='%s', load='%s', active='%s']",
-                id, name, country, load, active);
+                "Checkpoint[id='%s', name='%s', country='%s', load='%s', active='%s']",
+                identifier, name, country, load, active);
     }
 }
