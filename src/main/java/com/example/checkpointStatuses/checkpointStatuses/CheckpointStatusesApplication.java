@@ -1,4 +1,4 @@
-package com.example.checkpointstatuses.checkpointstatuses;
+package com.example.checkpointStatuses.checkpointStatuses;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

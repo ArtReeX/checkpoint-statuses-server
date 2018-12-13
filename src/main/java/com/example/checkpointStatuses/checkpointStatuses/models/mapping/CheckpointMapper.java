@@ -1,7 +1,7 @@
-package com.example.checkpointstatuses.checkpointstatuses.models.mapping;
+package com.example.checkpointStatuses.checkpointStatuses.models.mapping;
 
-import com.example.checkpointstatuses.checkpointstatuses.models.Checkpoint;
-import com.example.checkpointstatuses.checkpointstatuses.models.dtos.checkpoint.CheckpointDTO;
+import com.example.checkpointStatuses.checkpointStatuses.models.Checkpoint;
+import com.example.checkpointStatuses.checkpointStatuses.models.dtos.Checkpoint.CheckpointDTO;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

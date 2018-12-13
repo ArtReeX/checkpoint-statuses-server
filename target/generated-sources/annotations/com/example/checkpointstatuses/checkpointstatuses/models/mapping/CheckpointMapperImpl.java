@@ -1,7 +1,7 @@
-package com.example.checkpointstatuses.checkpointstatuses.models.mapping;
+package com.example.checkpointStatuses.checkpointStatuses.models.mapping;
 
-import com.example.checkpointstatuses.checkpointstatuses.models.Checkpoint;
-import com.example.checkpointstatuses.checkpointstatuses.models.dtos.checkpoint.CheckpointDTO;
+import com.example.checkpointStatuses.checkpointStatuses.models.Checkpoint;
+import com.example.checkpointStatuses.checkpointStatuses.models.dtos.Checkpoint.CheckpointDTO;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-12-05T23:11:04+0300",
-    comments = "version: 1.2.0.Final, compiler: javac, environment: Java 11.0.1 (Oracle Corporation)"
+    date = "2018-12-13T17:28:06+0300",
+    comments = "version: 1.2.0.Final, compiler: javac, environment: Java 11 (Oracle Corporation)"
 )
 @Component
 public class CheckpointMapperImpl implements CheckpointMapper {

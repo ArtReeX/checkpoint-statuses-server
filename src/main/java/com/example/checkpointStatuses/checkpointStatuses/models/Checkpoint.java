@@ -1,6 +1,6 @@
-package com.example.checkpointstatuses.checkpointstatuses.models;
+package com.example.checkpointStatuses.checkpointStatuses.models;
 
-import com.example.checkpointstatuses.checkpointstatuses.models.mapping.Statistics;
+import com.example.checkpointStatuses.checkpointStatuses.models.mapping.Statistics;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

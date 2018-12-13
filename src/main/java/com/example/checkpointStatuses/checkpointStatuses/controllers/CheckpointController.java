@@ -1,10 +1,10 @@
-package com.example.checkpointstatuses.checkpointstatuses.controllers;
+package com.example.checkpointStatuses.checkpointStatuses.controllers;
 
-import com.example.checkpointstatuses.checkpointstatuses.models.Checkpoint;
-import com.example.checkpointstatuses.checkpointstatuses.models.dtos.checkpoint.CheckpointDTO;
-import com.example.checkpointstatuses.checkpointstatuses.models.dtos.checkpoint.CheckpointSimpleDTO;
-import com.example.checkpointstatuses.checkpointstatuses.models.mapping.Statistics;
-import com.example.checkpointstatuses.checkpointstatuses.services.CheckpointService;
+import com.example.checkpointStatuses.checkpointStatuses.models.Checkpoint;
+import com.example.checkpointStatuses.checkpointStatuses.models.dtos.Checkpoint.CheckpointDTO;
+import com.example.checkpointStatuses.checkpointStatuses.models.dtos.Checkpoint.CheckpointSimpleDTO;
+import com.example.checkpointStatuses.checkpointStatuses.models.mapping.Statistics;
+import com.example.checkpointStatuses.checkpointStatuses.services.CheckpointService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

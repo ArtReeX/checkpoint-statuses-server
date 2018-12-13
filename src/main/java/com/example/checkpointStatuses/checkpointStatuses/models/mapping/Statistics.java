@@ -1,4 +1,4 @@
-package com.example.checkpointstatuses.checkpointstatuses.models.mapping;
+package com.example.checkpointStatuses.checkpointStatuses.models.mapping;
 
 import lombok.Data;
 

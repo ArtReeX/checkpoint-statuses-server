@@ -1,6 +1,6 @@
-package com.example.checkpointstatuses.checkpointstatuses.models.dtos.checkpoint;
+package com.example.checkpointStatuses.checkpointStatuses.models.dtos.Checkpoint;
 
-import com.example.checkpointstatuses.checkpointstatuses.models.mapping.Statistics;
+import com.example.checkpointStatuses.checkpointStatuses.models.mapping.Statistics;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
