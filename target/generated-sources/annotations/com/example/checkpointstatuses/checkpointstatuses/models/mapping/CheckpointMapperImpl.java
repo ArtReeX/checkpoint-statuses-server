@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-12-13T17:28:06+0300",
-    comments = "version: 1.2.0.Final, compiler: javac, environment: Java 11 (Oracle Corporation)"
+    date = "2018-12-14T22:23:26+0300",
+    comments = "version: 1.2.0.Final, compiler: javac, environment: Java 11.0.1 (Oracle Corporation)"
 )
 @Component
 public class CheckpointMapperImpl implements CheckpointMapper {

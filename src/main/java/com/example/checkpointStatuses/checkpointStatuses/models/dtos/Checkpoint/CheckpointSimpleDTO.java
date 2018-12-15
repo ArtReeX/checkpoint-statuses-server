@@ -8,7 +8,6 @@ import java.util.List;
 
 @Data
 public class CheckpointSimpleDTO {
-    @NotNull
     private String name;
     private String road;
     private Boolean active;

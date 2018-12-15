@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "f37491ef-7f16-4a58-be4a-bb8dd7f841a8",
+		"name": "checkpointStatuses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add checkpoint",
+			"item": [
+				{
+					"name": "Зайцево",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Зайцево\",\n\t\"road\": \"дорожный коридор Донецк – Горловка – Майорск – Зайцево – Артемовск, сектор «С»\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/checkpoints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"checkpoints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Бугас",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Бугас\",\n\t\"road\": \"дорожный коридор Донецк – Бугас – Волноваха – Мариуполь, сектор «Б»\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/checkpoints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"checkpoints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Гнутово",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Гнутово\",\n\t\"road\": \"Сектор «М»\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/checkpoints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"checkpoints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Лисичанск",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Лисичанск\",\n\t\"road\": \"дорожный коридор «Стаханов-Золотое-Горское-Лисичанск»\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/checkpoints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"checkpoints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Новоайдар",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Новоайдар\",\n\t\"road\": \"дорожный коридор «Станица Луганская-Счастье-Новоайдар»\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/checkpoints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"checkpoints"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get all checkpoints",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/checkpoints",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"checkpoints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add statistics",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\": \"243.456.322.55\",\n\t\"cars\": \"6\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/checkpoints/statistics?identifier=5c1403b08a187e0c5884a456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"checkpoints",
+						"statistics"
+					],
+					"query": [
+						{
+							"key": "identifier",
+							"value": "5c1403b08a187e0c5884a456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit checkpoint",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"active\": false,\n\t\"statistics\": []\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/checkpoints?identifier=5c1403a88a187e0c5884a454",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"checkpoints"
+					],
+					"query": [
+						{
+							"key": "identifier",
+							"value": "5c1403a88a187e0c5884a454"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

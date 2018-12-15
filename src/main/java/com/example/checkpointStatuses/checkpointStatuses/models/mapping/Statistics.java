@@ -17,5 +17,5 @@ public class Statistics {
     @Min(0)
     private Integer cars;
 
-    private Date date = new Date();
+    private Long date = new Date().getTime();
 }

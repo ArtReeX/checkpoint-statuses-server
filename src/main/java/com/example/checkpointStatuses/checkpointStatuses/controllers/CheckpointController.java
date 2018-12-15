@@ -22,36 +22,47 @@ public class CheckpointController {
         this._checkpointService = service;
     }
 
+    @CrossOrigin()
     @GetMapping()
     public ResponseEntity<List<Checkpoint>> getCheckpoints() {
         return _checkpointService.getCheckpoints();
     }
 
+    @CrossOrigin()
     @GetMapping(params = {"identifier"})
     public ResponseEntity<Checkpoint> getCheckpoints(@RequestParam("identifier") String identifier) {
         return _checkpointService.getCheckpoints(identifier);
     }
 
+    @CrossOrigin()
     @PostMapping()
     public ResponseEntity<Checkpoint> addCheckpoint(@RequestBody @Valid CheckpointDTO checkpointDTO) {
         return _checkpointService.addCheckpoint(checkpointDTO);
     }
 
+    @CrossOrigin()
     @PatchMapping(params = {"identifier"})
     public ResponseEntity<Checkpoint> editCheckpoint(@RequestParam("identifier") String identifier,
                                                     @RequestBody @Valid CheckpointSimpleDTO checkpointSimpleDTO) {
         return _checkpointService.editCheckpoint(identifier, checkpointSimpleDTO);
     }
 
+    @CrossOrigin()
+    @DeleteMapping()
+    public ResponseEntity<List<Checkpoint>> delCheckpoint() {
+        return _checkpointService.delCheckpoint();
+    }
+
+    @CrossOrigin()
     @DeleteMapping(params = {"identifier"})
     public ResponseEntity<List<Checkpoint>> delCheckpoint(@RequestParam("identifier") String identifier) {
         return _checkpointService.delCheckpoint(identifier);
     }
 
+    @CrossOrigin()
     @PostMapping(path = "/statistics", params = {"identifier"})
     public ResponseEntity<Checkpoint> addStatisticsCheckpoint(@RequestParam("identifier") String identifier,
                                                               @RequestBody @Valid Statistics statistics) {
-        System.out.println(statistics);
         return _checkpointService.addStatisticsCheckpoint(identifier, statistics);
     }
 }

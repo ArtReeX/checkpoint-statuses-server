@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,6 +29,7 @@ public class CheckpointService {
 
     public ResponseEntity<List<Checkpoint>> getCheckpoints() {
         List<Checkpoint> checkpoints = _repository.findAll();
+        checkpoints.sort(Comparator.comparing(Checkpoint::getName));
         return new ResponseEntity<>(checkpoints, HttpStatus.OK);
     }
 
@@ -70,6 +72,11 @@ public class CheckpointService {
 
         checkpoint = _repository.save(checkpoint);
         return new ResponseEntity<>(checkpoint, HttpStatus.OK);
+    }
+
+    public ResponseEntity<List<Checkpoint>> delCheckpoint() {
+        _repository.deleteAll();
+        return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
     public ResponseEntity<List<Checkpoint>> delCheckpoint(String identifier) {
